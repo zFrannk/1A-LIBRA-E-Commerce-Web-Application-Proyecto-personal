@@ -1,0 +1,129 @@
+body{
+
+    margin:0;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#0f0f0f;
+
+    color:white;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.perfil{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.perfil-box{
+
+    width:420px;
+
+    padding:35px;
+
+    box-sizing:border-box;
+
+    background:#1a1a1a;
+
+    border:1px solid #2b2b2b;
+
+    border-radius:14px;
+
+}
+
+
+.perfil-box h1{
+
+    margin:0 0 30px;
+
+    text-align:center;
+
+}
+
+
+.dato{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+    margin-bottom:20px;
+
+}
+
+
+.dato span{
+
+    color:#888;
+
+    font-size:.85rem;
+
+}
+
+
+.dato strong{
+
+    font-size:1rem;
+
+}
+
+
+.btn-cerrar{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:10px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:white;
+
+    color:black;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+/* BOTÓN IR AL PANEL DE ADMIN */
+.btn-admin {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-admin:hover {
+    background: #0284c7;
+    color: white;
+    transform: translateY(-2px);
+}

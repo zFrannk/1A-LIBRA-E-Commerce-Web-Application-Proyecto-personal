@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método de pago | 1A LIBRA</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/pages/pago.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="barra-superior">
+        <div class="logo">
+            <img src="../img/logos/logo.jpeg" alt="Logo">
+        </div>
+
+        <nav class="menu-principal">
+            <a href="../html/index.html">INICIO</a>
+            <a href="../html/index.html#productos">PRODUCTOS</a>
+            <div class="marca">
+                <a href="../html/index.html">1A LIBRA</a>
+            </div>
+            <a href="../html/index.html#faq">PREGUNTAS FRECUENTES</a>
+            <a href="../html/contacto.html">CONTACTO</a>
+        </nav>
+
+        <div class="acciones">
+            <div class="acciones-buscador">
+                <input type="text" id="buscador" placeholder="Buscar" class="buscador">
+                <div id="resultadosBusqueda"></div>
+                <img src="../img/logos/lupa.png" alt="Buscar" class="icono lupa">
+            </div>
+
+            <div class="acciones-login" id="contenedorUsuario">
+                <a href="../html/login.html" class="login" id="loginLink">Iniciar sesión</a>
+                <div class="menu-usuario" id="menuUsuario">
+                    <a href="perfil.html">Mi perfil</a>
+                    <a href="#">Mis pedidos</a>
+                    <a href="#" id="cerrarSesion">Cerrar sesión</a>
+                </div>
+            </div>
+
+            <a href="#" class="acciones-carrito" id="abrirCarrito">
+                <img src="../img/logos/cart.png" alt="Carrito" class="icono carrito">
+                <span id="contadorCarrito">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- PAGO -->
+    <main class="pago">
+        <h1>Método de pago</h1>
+
+        <div class="pago-contenido">
+
+            <!-- MÉTODOS DE PAGO -->
+            <section class="pago-card">
+                <h2>Seleccioná un método de pago</h2>
+
+                <!-- MERCADO PAGO -->
+                <label class="metodo-pago">
+                    <input type="radio" name="metodoPago" value="mercadopago">
+                    <div class="metodo-info">
+                        <strong>Mercado Pago</strong>
+                        <span>Pagá de forma segura con dinero en cuenta o tus tarjetas guardadas.</span>
+                    </div>
+                </label>
+
+                <!-- TARJETA -->
+                <label class="metodo-pago">
+                    <input type="radio" name="metodoPago" value="tarjeta">
+                    <div class="metodo-info">
+                        <strong>Tarjeta de crédito o débito</strong>
+                        <span>Visa, Mastercard, American Express y más.</span>
+                    </div>
+                </label>
+
+                <!-- FORMULARIO TARJETA -->
+                <div id="formularioTarjeta" class="formulario-tarjeta oculto">
+
+                    <div class="campo-pago">
+                        <label for="numeroTarjeta">Número de tarjeta</label>
+                        <div class="numero-tarjeta">
+                            <input type="text" id="numeroTarjeta" maxlength="19" placeholder="0000 0000 0000 0000" inputmode="numeric">
+                            <span id="marcaTarjeta" class="marca-tarjeta"></span>
+                        </div>
+                    </div>
+
+                    <div class="campo-pago">
+                        <label for="nombreTitular">Nombre del titular</label>
+                        <input type="text" id="nombreTitular" placeholder="Nombre que figura en la tarjeta">
+                    </div>
+
+                    <!-- CAMPO DNI AGREGADO (Requerido por Mercado Pago) -->
+                    <div class="campo-pago">
+                        <label for="documentoTitular">DNI del titular</label>
+                        <input type="text" id="documentoTitular" maxlength="8" placeholder="Número de documento sin puntos" inputmode="numeric">
+                    </div>
+
+                    <div class="fila-pago">
+                        <div class="campo-pago">
+                            <label for="vencimiento">Vencimiento</label>
+                            <input type="text" id="vencimiento" maxlength="5" placeholder="MM/AA" inputmode="numeric">
+                        </div>
+
+                        <div class="campo-pago">
+                            <label for="cvv">CVV</label>
+                            <input type="password" id="cvv" maxlength="4" placeholder="•••" inputmode="numeric">
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="mensajePago" class="mensaje-pago"></div>
+
+                <button id="btnContinuarPago" class="btn-continuar-pago">
+                    Continuar
+                </button>
+            </section>
+
+            <!-- RESUMEN -->
+            <section class="pago-card resumen-pago">
+                <h2>Resumen</h2>
+                <div id="resumenPago"></div>
+                <div class="total-pago">
+                    <span>Total</span>
+                    <strong id="totalPago">$0</strong>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- SDK Oficial de Mercado Pago -->
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+
+    <!-- Módulos de la Aplicación -->
+    <script src="../js/utils/carrito-utils.js"></script>
+    <script src="../js/auth/sesion.js"></script>
+    <script src="../js/pages/pagos.js"></script>
+
+</body>
+</html>

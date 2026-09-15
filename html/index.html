@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>1A LIBRA</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/pages/index.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components/header.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components/carrito-panel.css"
+    >
+
+    <link
+    rel="stylesheet"
+    href="../css/components/buscador.css"
+    >
+    
+</head>
+
+<body>
+
+    <header class="barra-superior">
+
+        <div class="logo">
+
+            <img
+                src="../img/logos/logo.jpeg"
+                alt="Logo"
+            >
+
+        </div>
+
+        <nav class="menu-principal">
+
+            <a href="../html/index.html">
+                INICIO
+            </a>
+
+            <a href="../html/index.html#productos">
+                PRODUCTOS
+            </a>
+
+            <div class="marca">
+
+                <a href="../html/index.html">
+                    1A LIBRA
+                </a>
+
+            </div>
+
+            <a href="../html/index.html#faq">
+                PREGUNTAS FRECUENTES
+            </a>
+
+            <a href="../html/contacto.html">
+                CONTACTO
+            </a>
+
+        </nav>
+
+        <div class="acciones">
+
+            <div class="acciones-buscador">
+
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="Buscar"
+                    class="buscador"
+                >
+
+                <div id ="resultadosBusqueda"> </div>
+
+                <img
+                    src="../img/logos/lupa.png"
+                    alt="Buscar"
+                    class="icono lupa"
+                >
+
+            </div>
+
+            <div
+                class="acciones-login"
+                id="contenedorUsuario"
+            >
+
+                <a
+                    href="../html/login.html"
+                    class="login"
+                    id="loginLink"
+                >
+                    Iniciar sesión
+                </a>
+
+                <div
+                    class="menu-usuario"
+                    id="menuUsuario"
+                >
+
+                    <a href="perfil.html">
+                        Mi perfil
+                    </a>
+
+                    <a href="#">
+                        Mis pedidos
+                    </a>
+
+                    <a
+                        href="#"
+                        id="cerrarSesion"
+                    >
+                        Cerrar sesión
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a
+                href="#"
+                class="acciones-carrito"
+                id="abrirCarrito"
+            >
+
+                <img
+                    src="../img/logos/cart.png"
+                    alt="Carrito"
+                    class="icono carrito"
+                >
+
+                <span id="contadorCarrito">
+                    0
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <section class="carrusel">
+
+        <div class="swiper">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+
+                    <div class="hero-info">
+
+                        <h1>
+
+                            Diseño moderno
+                            <br>
+                            y personalizado
+
+                        </h1>
+
+                        <p>
+
+                            Productos hechos de alta calidad
+                            pensados para acompañarte en tu día a día.
+
+                        </p>
+
+                        <button>
+
+                            Ver productos
+
+                        </button>
+
+                    </div>
+
+                    <img
+                        src="../img/destacadas_swipe/1.jpg"
+                        alt="Slide 1"
+                    >
+
+                </div>
+
+                <div class="swiper-slide">
+
+                    <div class="hero-info">
+
+                        <h1>
+
+                            Calidad premium
+                            <br>
+                            para todos los días
+
+                        </h1>
+
+                        <p>
+
+                            Diseños únicos pensados para destacar.
+
+                        </p>
+
+                        <button>
+
+                            Explorar colección
+
+                        </button>
+
+                    </div>
+
+                    <img
+                        src="../img/destacadas_swipe/2.png"
+                        alt="Slide 2"
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-button-prev"></div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <section
+        class="productos"
+        id="productos"
+    ></section>
+
+    <section
+        class="faq"
+        id="faq"
+    >
+
+        <div class="faq-item">
+
+            <h3 class="faq-question">
+
+                ¿Cómo hago un pedido?
+
+            </h3>
+
+            <div class="faq-content">
+
+                <p>
+
+                    Podés hacer un pedido desde la tienda
+                    seleccionando un producto.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3 class="faq-question">
+
+                ¿Cómo agrego un producto al carrito?
+
+            </h3>
+
+            <div class="faq-content">
+
+                <p>
+
+                    Solo hacé clic en "Agregar al carrito".
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3 class="faq-question">
+
+                ¿Puedo eliminar un producto?
+
+            </h3>
+
+            <div class="faq-content">
+
+                <p>
+
+                    Sí, desde el carrito podés quitar productos.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3 class="faq-question">
+
+                ¿Qué medios de pago aceptan?
+
+            </h3>
+
+            <div class="faq-content">
+
+                <p>
+
+                    Aceptamos todos los medios de pago.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <a
+        href="https://wa.me/+5491159140629"
+        target="_blank"
+        class="whatsapp"
+    >
+
+        <img
+            src="../img/logos/whatsapp.png"
+            alt="WhatsApp"
+        >
+
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+
+        const swiper = new Swiper(".swiper", {
+
+            loop: true,
+
+            autoplay: {
+                delay: 3000
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            }
+
+        });
+
+    </script>
+
+<!-- PANEL DEL CARRITO -->
+
+    <div id="overlayCarrito" class="overlay-carrito"></div>
+
+    <aside id="panelCarrito" class="panel-carrito">
+
+        <div class="panel-header">
+
+            <h2>Mi carrito</h2>
+
+            <button id="cerrarCarrito">
+                ✕
+            </button>
+
+        </div>
+
+        <div id="listaCarritoPanel">
+
+        </div>
+
+        <div class="panel-footer">
+
+            <h3 id="totalPanel">
+                Total: $0
+            </h3>
+
+            <a
+                href="../html/carrito.html"
+                class="btn-ver-carrito"
+            >
+                Ver carrito
+            </a>
+
+            <a
+                href="../html/checkout.html"
+                class="btn-finalizar"
+            >
+                Finalizar compra
+            </a>
+
+        </div>
+
+    </aside>
+
+    <script src="../js/utils/carrito-utils.js"></script>
+    <script src="../js/components/carrito-panel.js"></script>
+    <script src="../js/components/buscador.js"></script>
+    <script src="../js/auth/sesion.js"></script>
+    <script src="../js/pages/index.js"></script>
+
+
+
+    <div id="toast"></div>
+
+    <script src="../js/components/toast.js"></script>
+    
+</body>
+</html>

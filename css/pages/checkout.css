@@ -1,0 +1,399 @@
+/* ========================================
+   CHECKOUT
+======================================== */
+
+.checkout{
+
+    max-width:1200px;
+
+    margin:0 auto;
+
+    padding:50px 30px 80px;
+
+}
+
+
+.checkout h1{
+
+    margin:0 0 35px;
+
+    font-size:2rem;
+
+}
+
+
+/* ========================================
+   CONTENIDO
+======================================== */
+
+.checkout-contenido{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0, 1.3fr)
+        minmax(320px, .7fr);
+
+    gap:25px;
+
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.checkout-card{
+
+    background:#1a1a1a;
+
+    border:1px solid #2b2b2b;
+
+    border-radius:14px;
+
+    padding:30px;
+
+}
+
+
+.checkout-card h2{
+
+    margin:0 0 25px;
+
+    font-size:1.15rem;
+
+}
+
+
+/* ========================================
+   CAMPOS
+======================================== */
+
+.campo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:7px;
+
+    margin-bottom:18px;
+
+}
+
+
+.campo label{
+
+    color:#aaa;
+
+    font-size:.85rem;
+
+}
+
+
+.campo input{
+
+    width:100%;
+
+    padding:12px;
+
+    box-sizing:border-box;
+
+    border:1px solid #333;
+
+    border-radius:8px;
+
+    background:#242424;
+
+    color:white;
+
+    font-size:.95rem;
+
+    transition:.2s;
+
+}
+
+
+.campo input:focus{
+
+    outline:none;
+
+    border-color:#666;
+
+}
+
+
+.fila-campos{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+
+/* ========================================
+   RESUMEN
+======================================== */
+
+.resumen-checkout{
+
+    height:fit-content;
+
+}
+
+
+.total-checkout{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:1px solid #333;
+
+    font-size:1.1rem;
+
+}
+
+
+.total-checkout strong{
+
+    font-size:1.25rem;
+
+}
+
+
+/* ========================================
+   BOTON
+======================================== */
+
+.btn-confirmar{
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:white;
+
+    color:black;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+.btn-confirmar:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:800px){
+
+    .checkout{
+
+        padding:35px 20px 60px;
+
+    }
+
+
+    .checkout-contenido{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .resumen-checkout{
+
+        order:-1;
+
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .fila-campos{
+
+        grid-template-columns:1fr;
+
+        gap:0;
+
+    }
+
+}
+
+/* ========================================
+   PRODUCTOS DEL CHECKOUT
+======================================== */
+
+.producto-checkout{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #333;
+
+}
+
+
+.producto-checkout:first-child{
+
+    padding-top:0;
+
+}
+
+
+.imagen-checkout{
+
+    width:65px;
+
+    height:65px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+
+
+.info-checkout{
+
+    flex:1;
+
+}
+
+
+.info-checkout h3{
+
+    margin:0 0 7px;
+
+    font-size:.95rem;
+
+}
+
+
+.info-checkout p{
+
+    margin:3px 0;
+
+    color:#999;
+
+    font-size:.85rem;
+
+}
+
+
+.subtotal-checkout{
+
+    font-size:.95rem;
+
+    white-space:nowrap;
+
+}
+
+
+.checkout-vacio{
+
+    color:#999;
+
+    text-align:center;
+
+    padding:20px 0;
+
+}
+
+/* ========================================
+   MENSAJE CHECKOUT
+======================================== */
+
+#mensajeCheckout {
+
+    margin-top:15px;
+
+    margin-bottom:5px;
+
+    text-align:center;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+
+#mensajeCheckout.success {
+
+    color:#2ecc71;
+
+    border:1px solid #2ecc71;
+
+    border-radius:8px;
+
+    padding: 7px;
+
+    background-color: rgba(252, 252, 252, 0.089);
+
+}
+
+
+#mensajeCheckout.error {
+
+    color:#cc3221;
+
+    border:1px solid #d63a29;
+
+    border-radius:8px;
+
+    padding: 7px;
+
+    background-color: rgba(252, 252, 252, 0.089);
+
+}
+
+
+#mensajeCheckout.warning {
+
+    color:#f39c12;
+
+    border:1px solid #f39c12;
+
+    border-radius:8px;
+
+    padding: 7px;
+
+    background-color: rgba(252, 252, 252, 0.089);
+
+}

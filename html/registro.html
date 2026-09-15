@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Crear cuenta | 1A LIBRA</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/pages/registro.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components/toast.css"
+    >   
+
+</head>
+
+<body>
+
+    <section class="registro">
+
+        <div class="registro-box">
+
+            <h1>
+
+                Crear cuenta
+
+            </h1>
+
+            <div id="mensajeFormulario"></div>
+
+            <form id="formRegistro">
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Nombre completo"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Correo electrónico"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Contraseña"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="confirmarPassword"
+                    placeholder="Confirmar contraseña"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="btn-registro"
+                >
+
+                    Crear cuenta
+
+                </button>
+
+
+            </form>
+
+            <div class="separador">
+
+                o
+
+            </div>
+
+            <button
+                class="btn-google"
+                type="button"
+            >
+
+                Continuar con Google
+
+            </button>
+
+            <div class="login-link">
+
+                ¿Ya tienes una cuenta?
+
+                <br><br>
+
+                <a href="login.html">
+
+                    Iniciar sesión
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <div id="toast"></div>
+
+    <script src="../js/components/toast.js"></script>
+    <script src="../js/auth/registro.js"></script>
+
+</body>
+
+</html>

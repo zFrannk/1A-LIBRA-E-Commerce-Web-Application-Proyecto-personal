@@ -1,0 +1,230 @@
+body{
+
+    margin:0;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#0f0f0f;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+}
+
+.registro{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.registro-box{
+
+    width:420px;
+
+    background:#1a1a1a;
+
+    border:1px solid #2b2b2b;
+
+    border-radius:14px;
+
+    padding:35px;
+
+    box-sizing:border-box;
+
+}
+
+.registro-box h1{
+
+    margin:0 0 25px;
+
+    text-align:center;
+
+    font-size:2rem;
+
+}
+
+.registro-box input{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:15px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#2a2a2a;
+
+    color:white;
+
+    font-size:1rem;
+
+    box-sizing:border-box;
+
+}
+
+.registro-box input:focus{
+
+    outline:none;
+
+    border:1px solid #777;
+
+}
+
+.btn-registro{
+
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:white;
+
+    color:black;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.btn-registro:hover{
+
+    transform:scale(1.02);
+
+}
+
+.separador{
+
+    margin:25px 0;
+
+    text-align:center;
+
+    color:#999;
+
+}
+
+.btn-google{
+
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #444;
+
+    background:#242424;
+
+    color:white;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.btn-google:hover{
+
+    background:#303030;
+
+}
+
+.login-link{
+
+    margin-top:30px;
+
+    text-align:center;
+
+}
+
+.login-link a{
+
+    display:inline-block;
+
+    margin-top:12px;
+
+    padding:10px 22px;
+
+    border:1px solid #3b3b3b;
+
+    border-radius:10px;
+
+    background:#242424;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:
+        background .2s,
+        border-color .2s,
+        transform .2s;
+
+}
+
+.login-link a:hover{
+
+    background:#303030;
+
+    border-color:#555;
+
+    transform:translateY(-2px);
+
+}
+
+#mensajeFormulario{
+
+    min-height:22px;
+
+    margin:15px 0 20px;
+
+    text-align:center;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+}
+
+#mensajeFormulario.success{
+
+    color:#2ecc71;
+
+}
+
+#mensajeFormulario.error{
+
+    color:#e74c3c;
+
+}
+
+#mensajeFormulario.warning{
+
+    color:#f39c12;
+
+}

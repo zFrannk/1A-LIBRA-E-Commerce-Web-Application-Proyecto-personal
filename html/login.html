@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Iniciar sesión | 1A LIBRA</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/pages/login.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components/toast.css"
+    >   
+
+</head>
+
+<body>
+
+    <section class="login">
+
+        <div class="login-box">
+
+            <h1>
+
+                Iniciar sesión
+
+            </h1>
+
+            <div id="mensajeFormulario"></div>
+
+            <form id="formLogin" novalidate>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Correo electrónico"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Contraseña"
+                    required
+                >
+
+
+                <button
+                    type="submit"
+                    class="btn-login"
+                >
+                
+                    Iniciar sesión
+
+                </button>
+
+
+            </form>
+
+            <div class="separador">
+
+                o
+
+            </div>
+
+            <button
+                class="btn-google"
+                type="button"
+            >
+
+                Continuar con Google
+
+            </button>
+
+            <div class="registro-link">
+
+                ¿No tienes cuenta?
+
+                <br><br>
+
+                <a href="registro.html">
+
+                    Crear cuenta
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+    <div id="toast"></div>
+
+    <script src="../js/components/toast.js"></script>
+    <script src="../js/auth/login.js"></script>
+
+</body>
+
+</html>

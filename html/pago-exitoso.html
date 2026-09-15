@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Pago Exitoso! - 1A LIBRA</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <style>
+        .pago-contenedor {
+            max-width: 500px;
+            margin: 80px auto;
+            padding: 30px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .icono-exito {
+            font-size: 60px;
+            color: #22c55e;
+            margin-bottom: 15px;
+        }
+        .btn-inicio {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #2563eb;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pago-contenedor">
+        <div class="icono-exito">✓</div>
+        <h2>¡Tu pago se procesó con éxito!</h2>
+        <p>Gracias por tu compra en 1A LIBRA. Ya estamos preparando tu pedido.</p>
+        <a href="index.html" class="btn-inicio">Volver al inicio</a>
+    </div>
+
+    <script>
+        // Limpiamos el carrito local al confirmar la compra
+        localStorage.removeItem("carrito");
+    </script>
+</body>
+</html>

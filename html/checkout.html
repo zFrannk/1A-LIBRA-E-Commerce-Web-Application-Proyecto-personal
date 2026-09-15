@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Finalizar compra | 1A LIBRA</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components/header.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/pages/checkout.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="barra-superior">
+
+        <div class="logo">
+
+            <img
+                src="../img/logos/logo.jpeg"
+                alt="Logo"
+            >
+
+        </div>
+
+        <nav class="menu-principal">
+
+            <a href="../html/index.html">
+                INICIO
+            </a>
+
+            <a href="../html/index.html#productos">
+                PRODUCTOS
+            </a>
+
+            <div class="marca">
+
+                <a href="../html/index.html">
+                    1A LIBRA
+                </a>
+
+            </div>
+
+            <a href="../html/index.html#faq">
+                PREGUNTAS FRECUENTES
+            </a>
+
+            <a href="../html/contacto.html">
+                CONTACTO
+            </a>
+
+        </nav>
+
+        <div class="acciones">
+
+            <div class="acciones-buscador">
+
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="Buscar"
+                    class="buscador"
+                >
+
+                <div id ="resultadosBusqueda"> </div>
+
+                <img
+                    src="../img/logos/lupa.png"
+                    alt="Buscar"
+                    class="icono lupa"
+                >
+
+            </div>
+
+            <div
+                class="acciones-login"
+                id="contenedorUsuario"
+            >
+
+                <a
+                    href="../html/login.html"
+                    class="login"
+                    id="loginLink"
+                >
+                    Iniciar sesión
+                </a>
+
+                <div
+                    class="menu-usuario"
+                    id="menuUsuario"
+                >
+
+                    <a href="perfil.html">
+                        Mi perfil
+                    </a>
+
+                    <a href="#">
+                        Mis pedidos
+                    </a>
+
+                    <a
+                        href="#"
+                        id="cerrarSesion"
+                    >
+                        Cerrar sesión
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a
+                href="#"
+                class="acciones-carrito"
+                id="abrirCarrito"
+            >
+
+                <img
+                    src="../img/logos/cart.png"
+                    alt="Carrito"
+                    class="icono carrito"
+                >
+
+                <span id="contadorCarrito">
+                    0
+                </span>
+
+            </a>
+
+        </div>
+        
+    </header>
+
+
+    <main class="checkout">
+
+        <h1>
+            Finalizar compra
+        </h1>
+
+
+        <div class="checkout-contenido">
+
+
+            <!-- DATOS -->
+
+            <section class="checkout-card">
+
+                <h2>
+                    Datos de entrega
+                </h2>
+
+
+                <div class="campo">
+
+                    <label for="nombre">
+                        Nombre completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Nombre completo"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="email">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Correo electrónico"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="telefono">
+                        Teléfono
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        placeholder="Teléfono"
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="direccion">
+                        Dirección
+                    </label>
+
+                    <input
+                        type="text"
+                        id="direccion"
+                        placeholder="Dirección"
+                    >
+
+                </div>
+
+
+                <div class="fila-campos">
+
+                    <div class="campo">
+
+                        <label for="ciudad">
+                            Ciudad
+                        </label>
+
+                        <input
+                            type="text"
+                            id="ciudad"
+                            placeholder="Ciudad"
+                        >
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="codigoPostal">
+                            Código postal
+                        </label>
+
+                        <input
+                            type="text"
+                            id="codigoPostal"
+                            placeholder="Código postal"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RESUMEN -->
+
+            <section class="checkout-card resumen-checkout">
+
+                <h2>
+                    Resumen de compra
+                </h2>
+
+                <div id="resumenCheckout">
+
+                    <!-- JS va a colocar los productos acá -->
+
+                </div>
+
+
+                <div class="total-checkout">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="totalCheckout">
+                        $0
+                    </strong>
+
+                </div>
+
+
+                <button
+                    id="btnConfirmarCompra"
+                    class="btn-confirmar"
+                >
+
+                    Continuar con el pago
+
+                </button>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/utils/carrito-utils.js"></script>
+    <script src="../js/auth/sesion.js"></script>
+    <script src="../js/pages/checkout.js"></script>
+
+</body>
+
+</html>

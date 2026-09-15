@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Carrito | 1A LIBRA</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/pages/carrito.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components/carrito-panel.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components/header.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components/botones.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components/toast.css"
+    >
+
+    <link
+    rel="stylesheet"
+    href="../css/components/buscador.css"
+>
+
+</head>
+
+<body>
+
+    <header class="barra-superior">
+
+        <div class="logo">
+
+            <img
+                src="../img/logos/logo.jpeg"
+                alt="Logo"
+            >
+
+        </div>
+
+        <nav class="menu-principal">
+
+            <a href="../html/index.html">
+                INICIO
+            </a>
+
+            <a href="../html/index.html#productos">
+                PRODUCTOS
+            </a>
+
+            <div class="marca">
+
+                <a href="../html/index.html">
+                    1A LIBRA
+                </a>
+
+            </div>
+
+            <a href="../html/index.html#faq">
+                PREGUNTAS FRECUENTES
+            </a>
+
+            <a href="../html/contacto.html">
+                CONTACTO
+            </a>
+
+        </nav>
+
+        <div class="acciones">
+
+            <div class="acciones-buscador">
+
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="Buscar"
+                    class="buscador"
+                >
+
+                <div id ="resultadosBusqueda"> </div>
+
+                <img
+                    src="../img/logos/lupa.png"
+                    alt="Buscar"
+                    class="icono lupa"
+                >
+
+            </div>
+
+            <div
+                class="acciones-login"
+                id="contenedorUsuario"
+            >
+
+                <a
+                    href="../html/login.html"
+                    class="login"
+                    id="loginLink"
+                >
+                    Iniciar sesión
+                </a>
+
+                <div
+                    class="menu-usuario"
+                    id="menuUsuario"
+                >
+
+                    <a href="perfil.html">
+                        Mi perfil
+                    </a>
+
+                    <a href="#">
+                        Mis pedidos
+                    </a>
+
+                    <a
+                        href="#"
+                        id="cerrarSesion"
+                    >
+                        Cerrar sesión
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a
+                href="#"
+                class="acciones-carrito"
+                id="abrirCarrito"
+            >
+
+                <img
+                    src="../img/logos/cart.png"
+                    alt="Carrito"
+                    class="icono carrito"
+                >
+
+                <span id="contadorCarrito">
+                    0
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <main class="contenedor-carrito">
+
+        <h1>
+            Mi carrito
+        </h1>
+
+        <div class="carrito-layout">
+
+            <section class="carrito-productos">
+
+                <div id="listaCarrito"></div>
+
+                <div 
+                    id="carritoVacio"
+                    class="carrito-vacio"
+                >
+
+                    <h2>
+                        Tu carrito está vacío
+                    </h2>
+
+                    <p>
+                        Agregá productos para comenzazr tu compra.
+                    </p>
+
+                    <a
+                        href="../html/index.html"
+                        class="btn-seguir-comprando"
+                    >
+                        ← Explorar productos
+                    </a>
+                </div>
+
+            </section>
+
+            <aside class="resumen-carrito"  id="resumenCarrito">
+
+                <h2>
+                    Resumen del pedido
+                </h2>
+
+                <div class="resumen-linea">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <span id="subtotal">
+                        $0
+                    </span>
+
+                </div>
+
+                <div class="resumen-linea">
+
+                    <span>
+                        Envío
+                    </span>
+
+                    <span>
+                        Se calcula al finalizar
+                    </span>
+
+                </div>
+
+                <hr>
+
+                <div class="resumen-total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="total">
+                        $0
+                    </strong>
+
+                </div>
+
+                <button id="btnFinalizarCompra">
+                    
+                    <a
+                        href="../html/checkout.html"
+                        class="btn-finalizar-compra"
+                    >
+                        Finalizar compra
+                    </a>
+                </button>
+
+                <a
+                    href="../html/index.html"
+                    class="btn-seguir-comprando"
+                >
+
+                    ← Seguir comprando
+
+                </a>
+
+            </aside>
+
+        </div>
+
+    </main>
+  
+    <script src="../js/utils/carrito-utils.js"></script>
+    <script src="../js/auth/sesion.js"></script>
+    <script src="../js/pages/carrito.js"></script>
+    <script src="../js/components/buscador.js"></script>
+
+
+
+    <div id="toast"></div>
+
+    <script src="../js/components/toast.js"></script>
+
+
+</body>
+
+</html>

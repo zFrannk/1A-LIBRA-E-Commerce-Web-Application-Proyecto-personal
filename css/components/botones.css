@@ -1,0 +1,63 @@
+/* BOTONES DE CANTIDAD */
+
+.cantidad-selector {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1px;
+
+    margin: 5px 0;
+
+}
+
+.cantidad-selector button {
+
+    width: 30px;
+
+    height: 30px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #f1f1f1;
+
+    color: rgb(15, 15, 15);
+
+    font-size: 1.1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+.cantidad-selector button:hover {
+
+    background: #252525;
+
+    transform: scale(1.05);
+
+}
+
+.cantidad-selector button:active {
+
+    transform: scale(.95);
+
+}
+
+.cantidad-selector span {
+
+    min-width: 30px;
+
+    text-align: center;
+
+    font-size: 1rem;
+
+    font-weight: bold;
+
+}

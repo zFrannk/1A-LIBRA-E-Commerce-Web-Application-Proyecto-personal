@@ -1,0 +1,153 @@
+/* ESTILOS DEL PANEL DE ADMINISTRACIÓN */
+
+/* Ajuste de fondo para la temática oscura */
+body {
+    background-color: #0f172a;
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #f8fafc;
+}
+
+/* CONTENEDOR PRINCIPAL DEL FORMULARIO */
+.panel-container {
+    background-color: #1e293b;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    border-top: 5px solid #38bdf8; /* Borde superior destacado */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.panel-container h2 {
+    margin-top: 0;
+    color: #f8fafc;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* FORMULARIO DE PRODUCTOS */
+#formProducto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#formProducto label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #cbd5e1;
+    margin-bottom: -8px;
+}
+
+#formProducto input,
+#formProducto textarea,
+#formProducto select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background-color: #0f172a;
+    color: #f8fafc;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+#formProducto input:focus,
+#formProducto textarea:focus,
+#formProducto select:focus {
+    outline: none;
+    border-color: #38bdf8;
+    background-color: #0f172a;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+#formProducto textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+#formProducto button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#formProducto button:hover {
+    background-color: #1d4ed8;
+}
+
+#formProducto button:active {
+    transform: scale(0.99);
+}
+
+/* CONTENEDOR DE LA TABLA */
+.tabla-container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #334155;
+}
+
+.tabla-container h2 {
+    color: #f8fafc;
+    margin-top: 0;
+}
+
+/* ESTRUCTURA DE LA TABLA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #334155;
+    color: #cbd5e1;
+}
+
+th {
+    background-color: #0f172a;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+/* BOTONES DE ACCIÓN */
+.btn-editar {
+    background: #eab308;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn-eliminar {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn-editar:hover,
+.btn-eliminar:hover {
+    opacity: 0.85;
+}

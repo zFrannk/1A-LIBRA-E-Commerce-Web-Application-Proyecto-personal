@@ -1,0 +1,492 @@
+/* ========================================
+   PÁGINA
+======================================== */
+
+body{
+
+    margin:0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:#0f0f0f;
+
+    color:white;
+
+    min-height:100vh;
+
+}
+
+
+/* ========================================
+   CONTENEDOR
+======================================== */
+
+.pago{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    padding:50px 30px 80px;
+
+}
+
+
+.pago h1{
+
+    margin:0 0 35px;
+
+    font-size:2rem;
+
+}
+
+
+/* ========================================
+   CONTENIDO
+======================================== */
+
+.pago-contenido{
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0, 1.3fr)
+        minmax(320px, .7fr);
+
+    gap:25px;
+
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.pago-card{
+
+    background:#1a1a1a;
+
+    border:1px solid #2b2b2b;
+
+    border-radius:14px;
+
+    padding:30px;
+
+}
+
+
+.pago-card h2{
+
+    margin:0 0 25px;
+
+    font-size:1.15rem;
+
+}
+
+
+/* ========================================
+   MÉTODOS
+======================================== */
+
+.metodo-pago{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    border:1px solid #333;
+
+    border-radius:10px;
+
+    background:#242424;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+.metodo-pago:hover{
+
+    border-color:#666;
+
+    background:#292929;
+
+}
+
+
+.metodo-pago:has(input:checked){
+
+    border-color:#777;
+
+    background:#2a2a2a;
+
+}
+
+
+.metodo-pago input{
+
+    width:18px;
+
+    height:18px;
+
+    accent-color:white;
+
+}
+
+
+.metodo-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+}
+
+
+.metodo-info strong{
+
+    font-size:.95rem;
+
+}
+
+
+.metodo-info span{
+
+    color:#999;
+
+    font-size:.82rem;
+
+}
+
+
+/* ========================================
+   FORMULARIO TARJETA
+======================================== */
+
+.formulario-tarjeta{
+
+    margin-top:20px;
+
+    padding:20px;
+
+    background:#202020;
+
+    border:1px solid #333;
+
+    border-radius:10px;
+
+}
+
+
+.formulario-tarjeta.oculto{
+
+    display:none;
+
+}
+
+
+.campo-pago{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:7px;
+
+    margin-bottom:18px;
+
+}
+
+
+.campo-pago label{
+
+    color:#aaa;
+
+    font-size:.85rem;
+
+}
+
+
+.campo-pago input{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:12px;
+
+    border:1px solid #333;
+
+    border-radius:8px;
+
+    background:#292929;
+
+    color:white;
+
+    font-size:.9rem;
+
+}
+
+
+.campo-pago input:focus{
+
+    outline:none;
+
+    border-color:#777;
+
+}
+
+
+.numero-tarjeta{
+
+    position:relative;
+
+}
+
+
+.numero-tarjeta input{
+
+    padding-right:80px;
+
+}
+
+
+.marca-tarjeta{
+
+    position:absolute;
+
+    right:12px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#aaa;
+
+    font-size:.75rem;
+
+    font-weight:bold;
+
+}
+
+
+.fila-pago{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+
+/* ========================================
+   MENSAJE
+======================================== */
+
+.mensaje-pago{
+
+    min-height:22px;
+
+    margin:15px 0;
+
+    text-align:center;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+
+.mensaje-pago.error{
+
+    color:#e74c3c;
+
+}
+
+
+.mensaje-pago.success{
+
+    color:#2ecc71;
+
+}
+
+
+/* ========================================
+   BOTÓN
+======================================== */
+
+.btn-continuar-pago{
+
+    width:100%;
+
+    margin-top:5px;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:white;
+
+    color:black;
+
+    font-size:1rem;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+
+.btn-continuar-pago:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+/* ========================================
+   RESUMEN
+======================================== */
+
+.resumen-producto-pago{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #333;
+
+}
+
+
+.imagen-pago{
+
+    width:55px;
+
+    height:55px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+}
+
+
+.info-producto-pago{
+
+    flex:1;
+
+}
+
+
+.info-producto-pago h3{
+
+    margin:0 0 5px;
+
+    font-size:.9rem;
+
+}
+
+
+.info-producto-pago p{
+
+    margin:0;
+
+    color:#999;
+
+    font-size:.8rem;
+
+}
+
+
+.subtotal-pago{
+
+    white-space:nowrap;
+
+    font-size:.9rem;
+
+}
+
+
+.total-pago{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:20px;
+
+    padding-top:20px;
+
+    border-top:1px solid #333;
+
+}
+
+
+.total-pago strong{
+
+    font-size:1.2rem;
+
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:800px){
+
+    .pago{
+
+        padding:35px 20px 60px;
+
+    }
+
+
+    .pago-contenido{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .fila-pago{
+
+        grid-template-columns:1fr;
+
+        gap:0;
+
+    }
+
+}

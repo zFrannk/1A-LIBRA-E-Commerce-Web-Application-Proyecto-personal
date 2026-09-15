@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Producto | 1A LIBRA</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/estilos.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/pages/producto.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components/carrito-panel.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components/header.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/components/toast.css"
+    >
+    
+    <link
+    rel="stylesheet"
+    href="../css/components/buscador.css"
+    >
+    
+</head>
+
+<body>
+
+    <header class="barra-superior">
+
+        <div class="logo">
+
+            <img
+                src="../img/logos/logo.jpeg"
+                alt="Logo"
+            >
+
+        </div>
+
+        <nav class="menu-principal">
+
+            <a href="../html/index.html">
+                INICIO
+            </a>
+
+            <a href="../html/index.html#productos">
+                PRODUCTOS
+            </a>
+
+            <div class="marca">
+
+                <a href="../html/index.html">
+                    1A LIBRA
+                </a>
+
+            </div>
+
+            <a href="../html/index.html#faq">
+                PREGUNTAS FRECUENTES
+            </a>
+
+            <a href="../html/contacto.html">
+                CONTACTO
+            </a>
+
+        </nav>
+
+        <div class="acciones">
+
+            <div class="acciones-buscador">
+
+                <input
+                    type="text"
+                    id="buscador"
+                    placeholder="Buscar"
+                    class="buscador"
+                >
+
+                <div id ="resultadosBusqueda"> </div>
+
+                <img
+                    src="../img/logos/lupa.png"
+                    alt="Buscar"
+                    class="icono lupa"
+                >
+
+            </div>
+
+            <div
+                class="acciones-login"
+                id="contenedorUsuario"
+            >
+
+                <a
+                    href="../html/login.html"
+                    class="login"
+                    id="loginLink"
+                >
+                    Iniciar sesión
+                </a>
+
+                <div
+                    class="menu-usuario"
+                    id="menuUsuario"
+                >
+
+                    <a href="perfil.html">
+                        Mi perfil
+                    </a>
+
+                    <a href="#">
+                        Mis pedidos
+                    </a>
+
+                    <a
+                        href="#"
+                        id="cerrarSesion"
+                    >
+                        Cerrar sesión
+                    </a>
+
+                </div>
+
+            </div>
+
+            <a
+                href="#"
+                class="acciones-carrito"
+                id="abrirCarrito"
+            >
+
+                <img
+                    src="../img/logos/cart.png"
+                    alt="Carrito"
+                    class="icono carrito"
+                >
+
+                <span id="contadorCarrito">
+                    0
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+    <section class="detalle-producto">
+
+        <div class="producto-galeria">
+
+            <img
+                id="imagenPrincipal"
+                class="imagen-principal"
+                src="../img/productos/matero1.jpeg"
+                alt="Producto"
+            >
+
+            <div
+                class="miniaturas"
+                id="miniaturas"
+            ></div>
+
+        </div>
+
+        <div class="producto-info">
+
+            <span
+                class="producto-categoria"
+                id="categoriaProducto"
+            >
+                NUEVA COLECCIÓN
+            </span>
+
+            <h1 id="nombreProducto">
+                Matero Premium
+            </h1>
+
+            <p
+                class="producto-precio"
+                id="precioProducto"
+            >
+                $15.000
+            </p>
+
+            <p
+                class="producto-descripcion"
+                id="descripcionProducto"
+            >
+                Diseño artesanal minimalista pensado para el día a día.
+            </p>
+
+            <div class="producto-opciones">
+
+                <h3>Color</h3>
+
+                <div class="colores">
+
+                    <div class="color negro"></div>
+
+                    <div class="color marron"></div>
+
+                    <div class="color beige"></div>
+
+                </div>
+
+            </div>
+
+            <div class="producto-opciones">
+
+                <h3>Cantidad</h3>
+
+                <div class="cantidad-selector">
+
+                    <button id="btnMenos">
+                        -
+                    </button>
+
+                    <span id="cantidad">
+                        1
+                    </span>
+
+                    <button id="btnMas">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="producto-extra">
+
+                <p>
+                    Stock disponible
+                </p>
+
+                <p>
+                    Envío gratis a todo el país
+                </p>
+
+                <p>
+                    Atención personalizada
+                </p>
+
+            </div>
+
+            <div class="producto-opciones">
+
+                <h3>Tamaño</h3>
+
+                <div class="talles">
+
+                    <button>
+                        Chico
+                    </button>
+
+                    <button>
+                        Mediano
+                    </button>
+
+                    <button>
+                        Grande
+                    </button>
+
+                </div>
+
+            </div>
+
+            <button
+                class="btn-comprar"
+                id="btnComprar"
+            >
+                Agregar al carrito
+            </button>
+
+        </div>
+
+    </section>
+
+<!-- PANEL DEL CARRITO -->
+
+    <div id="overlayCarrito" class="overlay-carrito"></div>
+
+        <aside id="panelCarrito" class="panel-carrito">
+
+            <div class="panel-header">
+
+                <h2>Mi carrito</h2>
+
+                <button id="cerrarCarrito">
+                    ✕
+                </button>
+
+            </div>
+
+            <div id="listaCarritoPanel">
+
+            </div>
+
+            <div class="panel-footer">
+
+                <h3 id="totalPanel">
+                    Total: $0
+                </h3>
+
+                <a
+                    href="../html/carrito.html"
+                    class="btn-ver-carrito"
+                >
+                    Ver carrito
+                </a>
+
+                <a
+                    href="../html/checkout.html"
+                    class="btn-finalizar"
+                >
+                    Finalizar compra
+                </a>
+
+            </div>
+
+        </aside>
+
+    <script src="../js/utils/carrito-utils.js"></script>
+    <script src="../js/components/carrito-panel.js"></script>
+    <script src="../js/auth/sesion.js"></script>
+    <script src="../js/pages/producto.js"></script>
+    <script src="../js/components/buscador.js"></script>
+
+
+    <div id="toast"></div>
+
+    <script src="../js/components/toast.js"></script>
+
+</body>
+
+</html>

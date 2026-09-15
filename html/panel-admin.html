@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador - 1A LIBRA</title>
+    <link rel="stylesheet" href="../css/pages/panel-admin.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/carrito-panel.css">
+    <link rel="stylesheet" href="../css/components/buscador.css">
+</head>
+<body>
+    <header class="barra-superior">
+
+            <div class="logo">
+
+                <img
+                    src="../img/logos/logo.jpeg"
+                    alt="Logo"
+                >
+
+            </div>
+
+            <nav class="menu-principal">
+
+                <a href="../html/index.html">
+                    INICIO
+                </a>
+
+                <a href="../html/index.html#productos">
+                    PRODUCTOS
+                </a>
+
+                <div class="marca">
+
+                    <a href="../html/index.html">
+                        1A LIBRA
+                    </a>
+
+                </div>
+
+                <a href="../html/index.html#faq">
+                    PREGUNTAS FRECUENTES
+                </a>
+
+                <a href="../html/contacto.html">
+                    CONTACTO
+                </a>
+
+            </nav>
+
+            <div class="acciones">
+
+                <div class="acciones-buscador">
+
+                    <input
+                        type="text"
+                        id="buscador"
+                        placeholder="Buscar"
+                        class="buscador"
+                    >
+
+                    <div id ="resultadosBusqueda"> </div>
+
+                    <img
+                        src="../img/logos/lupa.png"
+                        alt="Buscar"
+                        class="icono lupa"
+                    >
+
+                </div>
+
+                <div
+                    class="acciones-login"
+                    id="contenedorUsuario"
+                >
+
+                    <a
+                        href="../html/login.html"
+                        class="login"
+                        id="loginLink"
+                    >
+                        Iniciar sesión
+                    </a>
+
+                    <div
+                        class="menu-usuario"
+                        id="menuUsuario"
+                    >
+
+                        <a href="perfil.html">
+                            Mi perfil
+                        </a>
+
+                        <a href="#">
+                            Mis pedidos
+                        </a>
+
+                        <a
+                            href="#"
+                            id="cerrarSesion"
+                        >
+                            Cerrar sesión
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="#"
+                    class="acciones-carrito"
+                    id="abrirCarrito"
+                >
+
+                    <img
+                        src="../img/logos/cart.png"
+                        alt="Carrito"
+                        class="icono carrito"
+                    >
+
+                    <span id="contadorCarrito">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+    </header>
+
+    <div class="panel-container">
+        <h2>Agregar Nuevo Producto</h2>
+
+        <form id="formProducto">
+            <label for="nombre">Nombre del producto:</label>
+            <input type="text" id="nombre" required placeholder="Ej: Mate Torpedo">
+
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" placeholder="Ej: Mate de calabaza con virola de alpaca"></textarea>
+
+            <label for="precio">Precio ($):</label>
+            <input type="number" step="0.01" id="precio" required placeholder="Ej: 18000">
+
+            <label for="stock">Stock:</label>
+            <input type="number" id="stock" required placeholder="Ej: 15">
+
+            <label for="categoria">Categoría:</label>
+            <select id="categoria">
+                <option value="Materos">Materos</option>
+                <option value="Bombillas">Bombillas</option>
+                <option value="Bolsos">Bolsos</option>
+                <option value="Accesorios">Accesorios</option>
+            </select>
+
+            <!-- En vez de input type="text", usamos file -->
+            <label for="imagen">Seleccionar imagen desde tu dispositivo:</label>
+            <input type="file" id="imagen" accept="image/*" required>
+
+
+            <button type="submit">Guardar Producto</button>
+        </form>
+    </div>
+
+                    <!-- TABLA DE GESTIÓN DE PRODUCTOS -->
+            <div class="tabla-container">
+                <h2>Productos Registrados</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaProductos">
+                        <!-- Los productos cargados desde MySQL se renderizan acá -->
+                    </tbody>
+                </table>
+            </div>
+
+
+
+    <script src="../js/pages/panel-admin.js"></script>
+    <script src="../js/auth/sesion.js"></script>
+    <script src="../js/pages/panel-admin.js"></script>
+</body>
+</html>
